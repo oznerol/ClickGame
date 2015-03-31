@@ -22,6 +22,10 @@ Template.home.helpers({
     return Items.find();
   },
   clicked: function() {
+  	var pos = getRandomPosition();
+    $('.theButton').css('position','absolute');
+	$('.theButton').css('left', pos[0] + 'px');
+	$('.theButton').css('top', pos[1] + 'px');
   	var myItem = Items.findOne({});
   	return myItem.clicks;
   }
@@ -31,10 +35,10 @@ Template.home.events({
   "click .theButton": function(e, tpl) {
     e.preventDefault();
     //var test = $(e.target).text("yo");
-    var pos = getRandomPosition();
-    $('.theButton').css('position','absolute');
-	$('.theButton').css('left', pos[0] + 'px');
-	$('.theButton').css('top', pos[1] + 'px');
+    //var pos = getRandomPosition();
+    //$('.theButton').css('position','absolute');
+	//$('.theButton').css('left', pos[0] + 'px');
+	//$('.theButton').css('top', pos[1] + 'px');
 
 	var myItem = Items.findOne({});
 	var itemId;
