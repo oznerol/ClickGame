@@ -3,7 +3,7 @@ HomeController = AppController.extend({
     return this.subscribe('items');
   },
   data: {
-    items: Items.find({})
+    items: Items.find({_id: 1})
   },
   onAfterAction: function () {
     //Meta.setTitle('Click the World');
