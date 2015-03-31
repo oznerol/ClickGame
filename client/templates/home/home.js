@@ -34,7 +34,7 @@ Template.home.helpers({
 Template.home.events({
   "click .theButton": function(e, tpl) {
     e.preventDefault();
-    //var test = $(e.target).text("yo");
+    $(e.target).blur();
     //var pos = getRandomPosition();
     //$('.theButton').css('position','absolute');
 	//$('.theButton').css('left', pos[0] + 'px');
